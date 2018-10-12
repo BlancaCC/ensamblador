@@ -1,10 +1,10 @@
 # Conceptos básico para programar en ensamblador   
 
 ## Índice de contenidos  
-- [ Compilación ](#Compilación del programa )  
-- [Registros básicos](#Registros básicos)
-- [Instrucciones básicas](## Intrucciones básicas )  
-- [Tipos de datos](# Tipos de datos )
+- [ Compilación ](#compilacion-del-programa )  
+- [Registros básicos](#registros-basicos)
+- [Instrucciones básicas](#intrucciones-basicas )  
+- [Tipos de datos](#tipos-de-datos )
 
 
 ## Compilación del programa  
@@ -13,7 +13,7 @@
 El `-g ` es para poder depurarlo, el -m32 es para trabajar en 32 bytes  
 
 
-### Posible problema  
+### Posibles problemas  
 
 Si intenta compilar por primera vez puede que obtenga, como me pasó a mí: 
 ```shell
@@ -51,24 +51,29 @@ main:	.global main
 
 ## Registro básicos  
 Los registros generaes que utilizaremos son:
+
 Registro | Origen del nombre  
---- | --- 
-%eax | acumulador
-%ecx | contador
-%edx | datos
-%ebx | base
-%esi | índice fuente
-%edi |índice destino
-%esp %ebp | puntero de pila y puntero bases USO ESPECIAL
+--- | ---   
+%eax | acumulador  
+%ecx | contador  
+%edx | datos  
+%ebx | base  
+%esi | índice fuente  
+%edi |índice destino  
+%esp %ebp | puntero de pila y puntero bases USO ESPECIAL  
 
 
 ## Intrucciones básicas 
 
-Instrucción | Descripcioncilla  
---- | ---  
-`pushl` | añade a pila  
-`popl`| elemina de pila   
-` mov a b` | mueve a -> b  
+Instrucción | Descripcioncilla | programilla donde se ejemplica   
+--- | --- |---    
+`push r` | añade a pila | [suma_lista.s](suma_lista.s)   
+`pop r`| elemina de pila | [suma_lista.s](suma_lista.s)   
+`call etiqueta` | se mueve hacia una etiqueta | [suma_lista.s](suma_lista.s)  
+`ret` | retorno de subrutina, se carga de la pila | [suma_lista.s](suma_lista.s)   
+` mov a, b` | mueve a -> b | [suma_lista.s](suma_lista.s)   
+`cmp a, b` | compara a y b levanta flags | [suma_lista.s](suma_lista.s)   
+`jne etiqueta` | compruena flag y si no son iguales salta | [suma_lista.s](suma_lista.s)  
 
 ## Tipos de dato  
 

@@ -4,5 +4,7 @@ Conocimientos en ensamblador adquiridos en parte gracias a la asigntarua de Estr
 ## Descripción particular del contenido  
 
 Nombre | Descripción
+--- | --- 
 [ensamblador esencial](ensamblador_esencial.md) | Resumen esencial de emsamblador   
 [hola.s](hola.s) | Programa básico de hola mundo  
+[suma_lista.s](suma_lista.s) | suma lista enteros positivos muy simple  
